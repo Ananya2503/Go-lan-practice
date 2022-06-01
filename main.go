@@ -18,4 +18,7 @@ func main() {
 	fmt.Println("Age:", age)
 	fmt.Println("Score:", score)
 	fmt.Println("Pass exam:", isPass)
+
+	fmt.Printf("\nName: %v\n", name)       //%v = print value
+	fmt.Printf("Type of name: %T\n", name) //%T = print type
 }
