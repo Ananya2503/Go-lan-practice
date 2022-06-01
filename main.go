@@ -4,6 +4,18 @@ import "fmt"
 
 //compile and run first
 func main() {
-	fmt.Println("Hello, Go!") //print and new line
-	fmt.Println("Ananya")
+	//constant variable
+	const name string = "Ananya"
+
+	//manual type declaration
+	var age int = 22
+
+	//type inferrence
+	score := 81.6
+	isPass := true
+
+	fmt.Println("My name is", name) //print with new line
+	fmt.Println("Age:", age)
+	fmt.Println("Score:", score)
+	fmt.Println("Pass exam:", isPass)
 }

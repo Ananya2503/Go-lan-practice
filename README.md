@@ -2,12 +2,12 @@
 
 ## Start project
 ```
-go mod init _module name/project name_
+go mod init {module name/project name}
 ```
 
 ## Run project
 ```
-go run _file name_
+go run {file name}
 ```
 
 ## Structure
@@ -20,15 +20,23 @@ go run _file name_
 |Data type|Description|Zero value (default value)|
 |:-------:|:---------:|:------------------------:|
 |bool|Logic value (true/false)|false|
-|int (8, 16, 32, 64)<br />unit (8, 16, 32, 64): เลขจำนวนเต็มแบบไม่คิดเครื่องหมาย<br />unitprt|integer|0|
+|int (8, 16, 32, 64)<br />unit (8, 16, 32, 64): ไม่คิดเครื่องหมาย<br />unitprt|integer|0|
 |float32 float64|floating number|0|
 |string|messege/set of characters|""|
+
+## Variable
+- static-type: ประกาศตัวแปรก่อนเรียกใช้งาน
+- การนิยามมี 2 รูปแบบ
+    1. **Manual Type Declaration**: ประกาศแบบระบุ data type มีโครงสร้าง คือ var {var name} {data type}
+    2. **Type Inference**: ประกาศแบบไม่ระบุ data type มีโครงสร้าง คือ {var name} := {value}
+- constant variable: ตัวแปรที่ไม่สามารถเปลี่ยนค่าได้
 
 ## Package
 - fmt: จัดการเรื่องรูปแบบ input/output
 
 ## ข้อสังเกต
 - เมื่อ import package เข้ามาแล้วต้องมีการเรียกใช้เท่านั้น
+- เมื่อนิยามตัวแปรแล้วต้องเรียกใช้เสมอ
 - ไม่จำเป็นต้องใส่ ;
 
 ## Credit
