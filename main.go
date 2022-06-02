@@ -22,7 +22,7 @@ func main() {
 	fmt.Printf("\nName: %v\n", name)       //%v = print value
 	fmt.Printf("Type of name: %T\n", name) //%T = print type
 
-	// Operator
+	// Math Operator
 	var num1, num2 = 10, 3
 
 	fmt.Println("add =", num1+num2)
@@ -30,4 +30,12 @@ func main() {
 	fmt.Println("times =", num1*num2)
 	fmt.Println("divided =", num1/num2)
 	fmt.Println("modulo =", num1%num2)
+
+	// Logic Operator
+	fmt.Println(num1, "equal", num2, ":", num1 == num2)
+	fmt.Println(num1, "not equal", num2, ":", num1 != num2)
+	fmt.Println(num1, "more than", num2, ":", num1 > num2)
+	fmt.Println(num1, "less than", num2, ":", num1 < num2)
+	fmt.Println(num1, "more than or equal", num2, ":", num1 >= num2)
+	fmt.Println(num1, "less than or equal", num2, ":", num1 <= num2)
 }
