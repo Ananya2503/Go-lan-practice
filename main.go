@@ -12,7 +12,7 @@ func main() {
 
 	//type inferrence
 	score := 81.6
-	isPass := true
+	var isPass = true
 
 	fmt.Println("My name is", name) //print with new line
 	fmt.Println("Age:", age)
@@ -21,4 +21,13 @@ func main() {
 
 	fmt.Printf("\nName: %v\n", name)       //%v = print value
 	fmt.Printf("Type of name: %T\n", name) //%T = print type
+
+	// Operator
+	var num1, num2 = 10, 3
+
+	fmt.Println("add =", num1+num2)
+	fmt.Println("minus =", num1-num2)
+	fmt.Println("times =", num1*num2)
+	fmt.Println("divided =", num1/num2)
+	fmt.Println("modulo =", num1%num2)
 }

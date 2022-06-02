@@ -31,6 +31,15 @@ go run {file name}
     2. **Type Inference**: ประกาศแบบไม่ระบุ data type มีโครงสร้าง คือ {var name} := {value}
 - constant variable: ตัวแปรที่ไม่สามารถเปลี่ยนค่าได้
 
+## Operator
+|Operator|Description|
+|:------:|:---------:|
+|+|add|
+|-|minus|
+|*|times|
+|/|divided|
+|%|modulo|
+
 ## Package
 - fmt: จัดการเรื่องรูปแบบ input/output
 
