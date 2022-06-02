@@ -20,6 +20,10 @@ func main() {
 	// Scanf
 	fmt.Printf("\n-----Get input from keyboard-----\n")
 	getInputFromKeyboard()
+
+	// If-Else
+	fmt.Printf("\n-----If statement-----\n")
+	ifStatement()
 }
 
 func variableDeclaration() {
@@ -66,4 +70,26 @@ func getInputFromKeyboard() {
 	fmt.Print("Enter name: ")
 	fmt.Scanf("%s", &name)
 	fmt.Println("Hello,", name)
+}
+
+func ifStatement() {
+	var score int
+	fmt.Print("Enter score: ")
+	fmt.Scanf("%d", &score)
+
+	/*
+		if condition {
+			statement
+		} else if {
+			statement
+		} else {
+			statement
+		}
+	*/
+
+	if score >= 50 {
+		fmt.Println("Pass")
+	} else {
+		fmt.Println("Fail")
+	}
 }
