@@ -4,26 +4,35 @@ import "fmt"
 
 //compile and run first
 func main() {
+	fmt.Println("1. Variable declaration")
+	fmt.Println("2. Math Operator")
+	fmt.Println("3. Logic Operator")
+	fmt.Println("4. If statement")
 
-	// Variable declaration
-	fmt.Println("-----Variable declaration-----")
-	variableDeclaration()
+	// switch case
+	var choice int
+	fmt.Print("\nEnter number: ")
+	fmt.Scanf("%d", &choice)
+	fmt.Println()
 
-	// Math Operator
-	fmt.Printf("\n-----Math Operator-----\n")
-	mathOperator(10, 3)
-
-	// Logic Operator
-	fmt.Printf("\n-----Logic Operator-----\n")
-	logicOperator(10, 3)
-
-	// Scanf
-	fmt.Printf("\n-----Get input from keyboard-----\n")
-	getInputFromKeyboard()
-
-	// If-Else
-	fmt.Printf("\n-----If statement-----\n")
-	ifStatement()
+	switch choice {
+	case 1:
+		variableDeclaration()
+	case 2:
+		var num1, num2 int
+		fmt.Scanf("%d %d", &num1, &num2)
+		mathOperator(num1, num2)
+	case 3:
+		var num1, num2 int
+		fmt.Scanf("%d %d", &num1, &num2)
+		logicOperator(num1, num2)
+	case 4:
+		var score int
+		fmt.Scanf("%d", &score)
+		ifStatement(score)
+	default:
+		fmt.Println("Incorrect number")
+	}
 }
 
 func variableDeclaration() {
@@ -64,19 +73,7 @@ func logicOperator(num1 int, num2 int) {
 	fmt.Println(num1, "less than or equal", num2, ":", num1 <= num2)
 }
 
-func getInputFromKeyboard() {
-	// fmt.Scanf(string_format, address_list)
-	var name string
-	fmt.Print("Enter name: ")
-	fmt.Scanf("%s", &name)
-	fmt.Println("Hello,", name)
-}
-
-func ifStatement() {
-	var score int
-	fmt.Print("Enter score: ")
-	fmt.Scanf("%d", &score)
-
+func ifStatement(score int) {
 	/*
 		if condition {
 			statement
