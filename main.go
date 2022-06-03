@@ -8,6 +8,7 @@ func main() {
 	fmt.Println("2. Math Operator")
 	fmt.Println("3. Logic Operator")
 	fmt.Println("4. If statement")
+	fmt.Println("5. Array")
 
 	// switch case
 	var choice int
@@ -30,6 +31,8 @@ func main() {
 		var score int
 		fmt.Scanf("%d", &score)
 		ifStatement(score)
+	case 5:
+		array()
 	default:
 		fmt.Println("Incorrect number")
 	}
@@ -89,4 +92,17 @@ func ifStatement(score int) {
 	} else {
 		fmt.Println("Fail")
 	}
+}
+
+func array() {
+	// Array declaration
+	var numbers1 [3]int = [3]int{100, 200, 300} // fixed size
+	numbers2 := [...]int{1, 2, 3, 4, 5}         // infinite array
+	numbers3 := [3]int{10}
+
+	fmt.Println(numbers1)
+	fmt.Println(numbers2)
+	fmt.Println(numbers3)
+	fmt.Println("Size of array 1:", len(numbers1))
+	fmt.Println("Size of array 2:", len(numbers2))
 }

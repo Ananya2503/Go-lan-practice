@@ -50,6 +50,11 @@ go run {file name}
 |>=|more than or equal|
 |<=|less than or equal|
 
+## Array
+- Element in array = same type
+- index start from 0
+- fixed size
+
 ## Package
 - fmt: จัดการเรื่องรูปแบบ input/output
 
