@@ -4,6 +4,14 @@ import (
 	"fmt"
 )
 
+// Structure
+type Product struct {
+	name     string
+	price    float64
+	category string
+	discount int
+}
+
 //compile and run first
 func main() {
 	fmt.Println("1. Variable declaration")
@@ -16,6 +24,7 @@ func main() {
 	fmt.Println("8. For loop")
 	fmt.Println("9. Function return multiple value")
 	fmt.Println("10. Variadic function")
+	fmt.Println("11. Structure")
 
 	// switch case
 	var choice int
@@ -52,9 +61,10 @@ func main() {
 	case 10:
 		total := variadicFunction(10, 2, 5, 3)
 		fmt.Println(total)
-
 		total = variadicFunction(2, 6)
 		fmt.Println(total)
+	case 11:
+		useStruct()
 	default:
 		fmt.Println("Incorrect number")
 	}
@@ -213,4 +223,10 @@ func variadicFunction(numbers ...int) int {
 		total += value
 	}
 	return total
+}
+
+func useStruct() {
+	pen := Product{name: "Pen", price: 20.5, category: "stationary", discount: 5}
+	fmt.Println(pen)
+	fmt.Println("Price is", pen.price)
 }

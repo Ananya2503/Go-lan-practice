@@ -10,7 +10,7 @@ go mod init {module name/project name}
 go run {file name}
 ```
 
-## Structure
+## Programming Structure
 - func main(): กลุ่มคำสั่งในฟังก์ชันนี้จะถูกทำงานเป็นลำดับแรกเสมอ
 - {} ใช้บอกขอบเขตการทำงานของฟังก์ชัน
 - ใช้ // หรือ /**/ เพื่อ comment
@@ -54,21 +54,49 @@ go run {file name}
 - Element in array = same type
 - index start from 0
 - fixed size
+- can use ... when array is infinite size
+```
+// Manual type declaration
+var var_name [size] element_type = [size] element_type {element}
+
+// Type inference
+var_name := [size] element_type {element}
+```
 
 ## Slice
 - คล้ายกับ Array
 - index start from 0
 - สามารถเข้าถึง element แบบระบุช่วงได้
 - dynamic size = สามารถเพิ่ม element ได้ด้วย append()
+```
+// Manual type declaration
+var var_name [] element_type = [] element_type {element}
+
+// Type inference
+var_name := [] element_type {element}
+```
 
 ## Map
 - เก็บข้อมูลแบบคู่ (key, value)
 - ใช้ key ในการเข้าถึงข้อมูล
 - key กับ value สามารถมี variable type คนละชนิดได้
+```
+map_name := map[key_type] value_type {key:value}
+```
 
 ## Break & Continue
 - break: หยุดและออกจาก loop ทันที
 - continue: หยุดการทำงานในรอบนั้น แล้วเริ่มต้นรอบใหม่
+
+## Structure (Struct)
+- นำข้อมูลที่มีชนิดต่างกันมารวมเข้าไว้ด้วยกัน
+- สามารถสร้างชนิดตัวแปรของตัวเองได้
+```
+type struct_name struct {
+    var1 var1_type;
+    var2 var2_type;
+}
+```
 
 ## Package
 - fmt: จัดการเรื่องรูปแบบ input/output
