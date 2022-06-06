@@ -15,6 +15,7 @@ func main() {
 	fmt.Println("7. Map")
 	fmt.Println("8. For loop")
 	fmt.Println("9. Function return multiple value")
+	fmt.Println("10. Variadic function")
 
 	// switch case
 	var choice int
@@ -48,6 +49,12 @@ func main() {
 	case 9:
 		total, status := returnMultipleValue(5, 3)
 		fmt.Println("5 + 3 =", total, "and", total, "is", status)
+	case 10:
+		total := variadicFunction(10, 2, 5, 3)
+		fmt.Println(total)
+
+		total = variadicFunction(2, 6)
+		fmt.Println(total)
 	default:
 		fmt.Println("Incorrect number")
 	}
@@ -186,14 +193,24 @@ func forLoop() {
 	}
 }
 
-func returnMultipleValue(num1 int, num2 int) (int, string) {
+func returnMultipleValue(num1, num2 int) (int, string) {
 	total := num1 + num2
 	status := ""
 
 	if total%2 == 0 {
-		status = "Even"
+		status = "even"
 	} else {
-		status = "Odd"
+		status = "odd"
 	}
 	return total, status
+}
+
+// Variadic function: function ที่รับ parameter ได้แบบไม่จำกัดจำนวน
+func variadicFunction(numbers ...int) int {
+	// numbers is slice
+	total := 0
+	for _, value := range numbers {
+		total += value
+	}
+	return total
 }
