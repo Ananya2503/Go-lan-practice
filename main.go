@@ -11,6 +11,7 @@ func main() {
 	fmt.Println("5. Array")
 	fmt.Println("6. Slice")
 	fmt.Println("7. Map")
+	fmt.Println("8. For loop")
 
 	// switch case
 	var choice int
@@ -39,6 +40,8 @@ func main() {
 		slice()
 	case 7:
 		mapType()
+	case 8:
+		forLoop()
 	default:
 		fmt.Println("Incorrect number")
 	}
@@ -141,12 +144,18 @@ func mapType() {
 	// check value in map
 	/*
 		value = value in key
-		check = bool
+		check = bool return true if has key in map
 	*/
 	value, check := country["JP"]
 	if check {
 		fmt.Println(value)
 	} else {
 		fmt.Println("No data")
+	}
+}
+
+func forLoop() {
+	for i := 0; i < 3; i++ {
+		fmt.Println("Hello, Ananya ~ !")
 	}
 }
