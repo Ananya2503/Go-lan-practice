@@ -55,6 +55,12 @@ go run {file name}
 - index start from 0
 - fixed size
 
+## Slice
+- คล้ายกับ Array
+- index start from 0
+- สามารถเข้าถึง element แบบระบุช่วงได้
+- dynamic size = สามารถเพิ่ม element ได้ด้วย append()
+
 ## Package
 - fmt: จัดการเรื่องรูปแบบ input/output
 

@@ -9,6 +9,7 @@ func main() {
 	fmt.Println("3. Logic Operator")
 	fmt.Println("4. If statement")
 	fmt.Println("5. Array")
+	fmt.Println("6. Slice")
 
 	// switch case
 	var choice int
@@ -33,6 +34,8 @@ func main() {
 		ifStatement(score)
 	case 5:
 		array()
+	case 6:
+		slice()
 	default:
 		fmt.Println("Incorrect number")
 	}
@@ -105,4 +108,21 @@ func array() {
 	fmt.Println(numbers3)
 	fmt.Println("Size of array 1:", len(numbers1))
 	fmt.Println("Size of array 2:", len(numbers2))
+}
+
+func slice() {
+	var numbers1 []int = []int{0, 1, 2, 3, 4}
+	numbers2 := []int{10, 20}
+
+	fmt.Println(numbers1)
+	fmt.Println(numbers2)
+
+	// append
+	numbers1 = append(numbers1, 5)
+	fmt.Println("After append 5 in numbers1: ", numbers1)
+
+	// เข้าถึงแบบเป็นช่วง -> slice_name[start_index:end_index + 1]
+	fmt.Println("Element from index 1 to 5: ", numbers1[1:])
+	fmt.Println("Element from index 0 to 2: ", numbers1[:3])
+	fmt.Println("Element from index 2 to 3: ", numbers1[2:4])
 }
