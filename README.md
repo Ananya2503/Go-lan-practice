@@ -61,6 +61,11 @@ go run {file name}
 - สามารถเข้าถึง element แบบระบุช่วงได้
 - dynamic size = สามารถเพิ่ม element ได้ด้วย append()
 
+## Map
+- เก็บข้อมูลแบบคู่ (key, value)
+- ใช้ key ในการเข้าถึงข้อมูล
+- key กับ value สามารถมี variable type คนละชนิดได้
+
 ## Package
 - fmt: จัดการเรื่องรูปแบบ input/output
 

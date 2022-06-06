@@ -10,6 +10,7 @@ func main() {
 	fmt.Println("4. If statement")
 	fmt.Println("5. Array")
 	fmt.Println("6. Slice")
+	fmt.Println("7. Map")
 
 	// switch case
 	var choice int
@@ -36,6 +37,8 @@ func main() {
 		array()
 	case 6:
 		slice()
+	case 7:
+		mapType()
 	default:
 		fmt.Println("Incorrect number")
 	}
@@ -125,4 +128,25 @@ func slice() {
 	fmt.Println("Element from index 1 to 5: ", numbers1[1:])
 	fmt.Println("Element from index 0 to 2: ", numbers1[:3])
 	fmt.Println("Element from index 2 to 3: ", numbers1[2:4])
+}
+
+func mapType() {
+	// declaration
+	country := map[string]string{"TH": "Thailand", "JP": "Japan"}
+	country["CN"] = "China"
+
+	fmt.Println(country)
+	fmt.Println("Key is TH:", country["TH"])
+
+	// check value in map
+	/*
+		value = value in key
+		check = bool
+	*/
+	value, check := country["JP"]
+	if check {
+		fmt.Println(value)
+	} else {
+		fmt.Println("No data")
+	}
 }
