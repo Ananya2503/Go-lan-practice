@@ -66,6 +66,10 @@ go run {file name}
 - ใช้ key ในการเข้าถึงข้อมูล
 - key กับ value สามารถมี variable type คนละชนิดได้
 
+## Break & Continue
+- break: หยุดและออกจาก loop ทันที
+- continue: หยุดการทำงานในรอบนั้น แล้วเริ่มต้นรอบใหม่
+
 ## Package
 - fmt: จัดการเรื่องรูปแบบ input/output
 

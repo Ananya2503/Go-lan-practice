@@ -155,7 +155,13 @@ func mapType() {
 }
 
 func forLoop() {
-	for i := 0; i < 3; i++ {
-		fmt.Println("Hello, Ananya ~ !")
+	for i := 0; i < 11; i++ {
+		if i == 9 {
+			break
+		}
+		if i%2 != 0 {
+			continue
+		}
+		fmt.Println(i)
 	}
 }
