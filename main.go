@@ -2,6 +2,7 @@ package main //main.go run first
 
 import (
 	"fmt"
+	"gobasic/calculator"
 )
 
 // Structure
@@ -25,6 +26,7 @@ func main() {
 	fmt.Println("9. Function return multiple value")
 	fmt.Println("10. Variadic function")
 	fmt.Println("11. Structure")
+	fmt.Println("12. Package")
 
 	// switch case
 	var choice int
@@ -65,6 +67,9 @@ func main() {
 		fmt.Println(total)
 	case 11:
 		useStruct()
+	case 12:
+		fmt.Println("2 + 6 =", calculator.Add(2, 6))
+		fmt.Println("5 - 3 =", calculator.Subtract(5, 3))
 	default:
 		fmt.Println("Incorrect number")
 	}
