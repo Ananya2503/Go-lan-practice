@@ -1,6 +1,8 @@
 package main //main.go run first
 
-import "fmt"
+import (
+	"fmt"
+)
 
 //compile and run first
 func main() {
@@ -155,6 +157,7 @@ func mapType() {
 }
 
 func forLoop() {
+	fmt.Println("---for loop with break and continue---")
 	for i := 0; i < 11; i++ {
 		if i == 9 {
 			break
@@ -163,5 +166,18 @@ func forLoop() {
 			continue
 		}
 		fmt.Println(i)
+	}
+
+	// for range: if want to ignore "index:, use "_"
+	fmt.Printf("\n---for range---\n")
+	numbers := []int{10, 20, 30, 40, 50}
+	for index, value := range numbers {
+		fmt.Println("index", index, "has value", value)
+	}
+
+	fmt.Printf("\n---for range (ignore index)---\n")
+	language := map[string]string{"TH": "Thai", "EN": "English"}
+	for _, value := range language {
+		fmt.Println(value)
 	}
 }
