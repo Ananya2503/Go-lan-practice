@@ -14,6 +14,7 @@ func main() {
 	fmt.Println("6. Slice")
 	fmt.Println("7. Map")
 	fmt.Println("8. For loop")
+	fmt.Println("9. Function return multiple value")
 
 	// switch case
 	var choice int
@@ -44,6 +45,9 @@ func main() {
 		mapType()
 	case 8:
 		forLoop()
+	case 9:
+		total, status := returnMultipleValue(5, 3)
+		fmt.Println("5 + 3 =", total, "and", total, "is", status)
 	default:
 		fmt.Println("Incorrect number")
 	}
@@ -180,4 +184,16 @@ func forLoop() {
 	for _, value := range language {
 		fmt.Println(value)
 	}
+}
+
+func returnMultipleValue(num1 int, num2 int) (int, string) {
+	total := num1 + num2
+	status := ""
+
+	if total%2 == 0 {
+		status = "Even"
+	} else {
+		status = "Odd"
+	}
+	return total, status
 }
