@@ -2,6 +2,7 @@ package main //main.go run first
 
 import (
 	"fmt"
+	ifstatement "gobasic/ifStatement"
 	logicoperator "gobasic/logicOperator"
 	mathoperator "gobasic/mathOperator"
 	"gobasic/variable"
@@ -61,9 +62,8 @@ func main() {
 		fmt.Println("5 >= 3:", logicoperator.MoreThanOrEqual(5, 3))
 		fmt.Println("5 <= 3:", logicoperator.LessThanOrEqual(5, 3))
 	case 4:
-		var score int
-		fmt.Scanf("%d", &score)
-		ifStatement(score)
+		ifstatement.IfStatement()
+		fmt.Printf("Grade is %s", ifstatement.Grade(80))
 	case 5:
 		array()
 	case 6:
@@ -84,24 +84,6 @@ func main() {
 		useStruct()
 	default:
 		fmt.Println("Incorrect number")
-	}
-}
-
-func ifStatement(score int) {
-	/*
-		if condition {
-			statement
-		} else if {
-			statement
-		} else {
-			statement
-		}
-	*/
-
-	if score >= 50 {
-		fmt.Println("Pass")
-	} else {
-		fmt.Println("Fail")
 	}
 }
 
