@@ -2,6 +2,7 @@ package main //main.go run first
 
 import (
 	"fmt"
+	mathoperator "gobasic/mathOperator"
 	"gobasic/variable"
 )
 
@@ -38,10 +39,19 @@ func main() {
 	case 1:
 		variable.DataType()
 		variable.VariableDeclaration()
-		// 	case 2:
-		// 		var num1, num2 int
-		// 		fmt.Scanf("%d %d", &num1, &num2)
-		// 		mathOperator(num1, num2)
+	case 2:
+		mathoperator.MathOperator()
+		add := mathoperator.Add(5, 3)
+		subtract := mathoperator.Subtract(5, 3)
+		multiples := mathoperator.Multiples(5, 3)
+		divided, _ := mathoperator.Divided(5, 3)
+		mod := mathoperator.Modulo(5, 3)
+
+		fmt.Println("5 + 3 =", add)
+		fmt.Println("5 - 3 =", subtract)
+		fmt.Println("5 * 3 =", multiples)
+		fmt.Println("5 / 3 =", divided)
+		fmt.Println("5 % 3 =", mod)
 		// 	case 3:
 		// 		var num1, num2 int
 		// 		fmt.Scanf("%d %d", &num1, &num2)

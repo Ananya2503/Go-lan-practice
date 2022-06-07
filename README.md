@@ -16,15 +16,6 @@ go run {file name}
 - ใช้ // หรือ /**/ เพื่อ comment
 - import "package_name": เรียกใช้คำสั่งพื้นฐานใน package_name
 
-## Math Operator
-|Operator|Description|
-|:------:|:---------:|
-|+|add|
-|-|minus|
-|*|times|
-|/|divided|
-|%|modulo|
-
 ## Logic Operator
 |Operator|Description|
 |:------:|:---------:|
