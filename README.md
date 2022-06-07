@@ -16,16 +16,6 @@ go run {file name}
 - ใช้ // หรือ /**/ เพื่อ comment
 - import "package_name": เรียกใช้คำสั่งพื้นฐานใน package_name
 
-## Logic Operator
-|Operator|Description|
-|:------:|:---------:|
-|==|equal|
-|!=|not equal|
-|>|more than|
-|<|less than|
-|>=|more than or equal|
-|<=|less than or equal|
-
 ## Array
 - Element in array = same type
 - index start from 0
